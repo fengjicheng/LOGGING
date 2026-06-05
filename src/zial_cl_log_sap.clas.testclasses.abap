@@ -41,12 +41,11 @@ CLASS ltc_log IMPLEMENTATION.
 
   METHOD class_setup.
 
-    mo_aunit = zial_cl_aunit=>on_class_setup(
-                   iv_tdc_cnt    = mc_tdc_cnt
-                   iv_ign_errors = abap_true
-                   ir_tdc_data   = REF #( ms_tdc_data )
-                   it_sql_data   = VALUE #( ( tbl_name = 'ZIAL_T_LOG_CNF'
-                                              tbl_data = REF #( ms_tdc_data-t_log_cnf ) ) ) ).
+    mo_aunit = zial_cl_aunit=>on_class_setup( iv_tdc_cnt    = mc_tdc_cnt
+                                              iv_ign_errors = abap_true
+                                              ir_tdc_data   = REF #( ms_tdc_data )
+                                              it_sql_data   = VALUE #( ( tbl_name = 'ZIAL_T_LOG_CNF'
+                                                                         tbl_data = REF #( ms_tdc_data-t_log_cnf ) ) ) ).
 
   ENDMETHOD.
 

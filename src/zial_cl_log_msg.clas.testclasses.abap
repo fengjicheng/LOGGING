@@ -63,6 +63,7 @@ CLASS ltc_log_msg IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD t0001.
 
     CHECK mo_aunit->is_active( abap_true ).
